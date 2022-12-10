@@ -1,0 +1,33 @@
+<div class="mb-3">
+  <%= link_to new_room_path, class: 'btn btn-primary' do %>
+    Create a room
+  <% end %>
+</div>
+
+<% if @rooms.present? %>
+  <nav class="nav flex-column">
+    
+    <ul class="list-group">
+        <% @rooms.each do |room| %>
+            <li class="list-group-item list-group-item-action">
+            <div class="d-flex justify-content-between">
+              <div>
+                <a href="<%= room_path(room) %>" class="text-decoration-none text-center">
+                  <%= room.name %>
+                </a>
+              </div>
+              <div class="">
+                <%= link_to room_path(room), method: :destroy do %>
+                  <i class="fa fa-trash text-danger"></i>
+                <% end %>
+              </div>
+            </div>
+            </li>
+        <% end %>
+    </ul>
+  </nav>
+<% else %>
+  <div class="text-muted">
+    The are no rooms
+  </div>
+<% end %>
