@@ -67,7 +67,7 @@ end
 gem "bootstrap", "~> 5.2.3"
 gem "simple_form"
 gem "jquery-rails"
-
+gem 'hiredis'
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
