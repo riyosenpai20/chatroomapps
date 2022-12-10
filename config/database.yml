@@ -82,6 +82,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: chatroomapps_production
-  username: chatroomapps
+  database: render_deploy_production_gjyi
+  username: render_deploy
   password: <%= ENV["CHATROOMAPPS_DATABASE_PASSWORD"] %>
